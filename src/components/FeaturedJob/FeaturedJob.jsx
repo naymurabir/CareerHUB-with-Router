@@ -1,13 +1,21 @@
 import PropTypes from 'prop-types';
 import { BiDollarCircle, BiLocationPlus } from 'react-icons/bi';
+import { useNavigate } from 'react-router-dom';
 
 
 const FeaturedJob = ({ job }) => {
 
-    const { logo, job_title, company_name, job_type, remote_or_onsite, location, salary } = job
+    const { id, logo, job_title, company_name, job_type, remote_or_onsite, location, salary } = job
+
+    const navigate = useNavigate()
+
+    const handleJobDetails = () => {
+        navigate(`/job/${id}`)
+    }
+
 
     return (
-        <div className="card bg-base-100 shadow-xl border-2 border-gray-200 px-5 py-6 space-y-2">
+        <div className="card bg-base-100 shadow-xl border-2 border-gray-200 px-5 py-6 space-y-2 flex flex-col">
 
             <img className='w-28 h-18' src={logo} alt="Jobs" />
             <h2 className='text-xl font-bold'>{job_title}</h2>
@@ -20,7 +28,7 @@ const FeaturedJob = ({ job }) => {
 
             </div>
 
-            <div className='flex justify-between'>
+            <div className='flex justify-between flex-grow'>
 
                 <h4 className='flex items-center gap-1'> <BiLocationPlus /><span className='font-bold'>Location:</span> {location}</h4>
 
@@ -28,7 +36,7 @@ const FeaturedJob = ({ job }) => {
                     <BiDollarCircle /> <span className='font-bold'>Salary:</span> {salary}</h3>
             </div>
 
-            <button className='mr-3 btn-outline btn btn-primary w-40'>Show Details</button>
+            <button onClick={handleJobDetails} className='mr-3 btn-outline btn btn-primary w-40'>Show Details</button>
         </div>
 
     );
