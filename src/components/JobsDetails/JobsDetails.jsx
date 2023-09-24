@@ -23,14 +23,13 @@ const JobsDetails = () => {
 
     } = job
 
-    const handleApplyApplication = (id) => {
+    const handleApplyApplication = () => {
+        saveApplicationToLocalStorage(idInt)
         toast("Application added successfully! ")
-        saveApplicationToLocalStorage(id)
     }
 
 
     return (
-
 
         <div>
             <div className="text-center my-10">

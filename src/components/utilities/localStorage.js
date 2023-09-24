@@ -15,6 +15,6 @@ const saveApplicationToLocalStorage = (id) => {
     }
 }
 
-export { saveApplicationToLocalStorage }
+export { saveApplicationToLocalStorage, getStoredApplications }
 
 
