@@ -9,8 +9,8 @@ const AppliedJob = ({ appliedJob }) => {
 
     return (
 
-        <div className='flex justify-between items-center border-2 border-gray-300 px-5 py-4 my-5'>
-            <div className="flex items-center gap-8 ">
+        <div className='flex flex-col md:flex-row justify-between items-center border-2 border-gray-300 px-5 py-4 my-5'>
+            <div className="flex flex-col md:flex-row items-center gap-8 ">
                 <img className='w-28 h-5' src={logo} alt="Jobs" />
                 <div>
                     <h2 className='text-xl font-bold'>{job_title}</h2>
@@ -25,10 +25,10 @@ const AppliedJob = ({ appliedJob }) => {
 
                     <div className='flex justify-between gap-5'>
 
-                        <h4 className='flex items-center gap-1'> <BiLocationPlus /><span className='font-bold'>Location:</span> {location}</h4>
+                        <h4 className='flex items-center gap-1'> <BiLocationPlus /><span className='font-bold'></span> {location}</h4>
 
                         <h3 className='flex items-center gap-1'>
-                            <BiDollarCircle /> <span className='font-bold'>Salary:</span> {salary}</h3>
+                            <BiDollarCircle /> <span className='font-bold'></span> {salary}</h3>
                     </div>
                 </div>
 

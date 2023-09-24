@@ -30,10 +30,10 @@ const FeaturedJob = ({ job }) => {
 
             <div className='flex justify-between flex-grow'>
 
-                <h4 className='flex items-center gap-1'> <BiLocationPlus /><span className='font-bold'>Location:</span> {location}</h4>
+                <h4 className='flex items-center gap-1'> <BiLocationPlus /><span className='font-bold'></span> {location}</h4>
 
                 <h3 className='flex items-center gap-1'>
-                    <BiDollarCircle /> <span className='font-bold'>Salary:</span> {salary}</h3>
+                    <BiDollarCircle /> <span className='font-bold'></span> {salary}</h3>
             </div>
 
             <button onClick={handleJobDetails} className='mr-3 btn-outline btn btn-primary w-40'>Show Details</button>
