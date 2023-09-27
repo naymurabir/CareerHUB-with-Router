@@ -3,6 +3,7 @@ import { saveApplicationToLocalStorage } from "../utilities/localStorage";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const JobsDetails = () => {
@@ -32,6 +33,9 @@ const JobsDetails = () => {
     return (
 
         <div>
+            <Helmet>
+                <title>Career Hub | Job Details</title>
+            </Helmet>
             <div className="text-center my-10">
                 <h2 className="text-xl font-bold">Job Details</h2>
             </div>

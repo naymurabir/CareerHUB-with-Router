@@ -1,5 +1,6 @@
 import { BiDollarCircle, BiLocationPlus } from 'react-icons/bi';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -10,6 +11,9 @@ const AppliedJob = ({ appliedJob }) => {
     return (
 
         <div className='flex flex-col md:flex-row justify-between items-center border-2 border-gray-300 px-5 py-4 my-5'>
+            <Helmet>
+                <title>Career Hub | Applied Jobs</title>
+            </Helmet>
             <div className="flex flex-col md:flex-row items-center gap-8 ">
                 <img className='w-28 h-5' src={logo} alt="Jobs" />
                 <div>
